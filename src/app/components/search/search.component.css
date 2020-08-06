@@ -1,0 +1,26 @@
+.float-child{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 80px;
+  outline: 1px solid red;
+  height: inherit;
+}
+
+.child{
+    width: 200px;
+    height: inherit;
+}
+
+.mat-option{
+    height: 100px;
+}
+
+.childimg{
+    width:   80px;  
+    
+}
+
+.mat-option:hover {
+    background: lightseagreen;
+}

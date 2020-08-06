@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-gap: 20px;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 800px;
+}
+.float-child{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    white-space: nowrap;
+  text-align: center;
+  margin: auto;
+}
+
+mat-expansion-panel-header:hover {
+  background-color: lightseagreen !important;
+}

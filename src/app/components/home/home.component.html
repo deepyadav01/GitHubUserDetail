@@ -1,0 +1,39 @@
+<div *ngIf="users.length !== 0">
+    <div class="grid-container">
+      <div>
+        <app-search (SelectedOptionOn)="onSelectedOption($event)"></app-search>
+      </div>
+      <div>
+        <mat-accordion class="example-headers-align" #myaccordion="matAccordion" multi="true">
+          <div *ngFor="let user of users; let index = index">
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ user.login }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="float-child">
+                <div>
+                  <img style="width: 330px;" src="{{ user.avatar_url }}" />
+                </div>
+                <div>
+                  <p> url: <a href="{{ user.url }}" target="_blank">{{ user.url }}</a></p>
+                  <p> html_url: <a href="{{ user.html_url }}" target="_blank">{{ user.html_url }}</a></p>
+                  <p> followers_url: <a href="{{ user.followers_url }}" target="_blank">{{ user.followers_url }}</a></p>
+                  <p> following_url: <a href="{{ user.following_url }}" target="_blank">{{ user.following_url }}</a></p>
+                  <p> gists_url: <a href="{{ user.gists_url }}" target="_blank">{{ user.gists_url }}</a></p>
+                  <p> starred_url: <a href="{{ user.starred_url }}" target="_blank">{{ user.starred_url }}</a></p>
+                  <p> subscriptions_url: <a href="{{ user.subscriptions_url }}" target="_blank">{{ user.subscriptions_url }}</a></p>
+                  <p> organizations_url: <a href="{{ user.organizations_url }}" target="_blank">{{ user.organizations_url }}</a></p>
+                  <p> repos_url: <a href="{{ user.repos_url }}" target="_blank">{{ user.repos_url }}</a></p>
+                  <p> events_url: <a href="{{ user.events_url }}" target="_blank">{{ user.events_url }}</a></p>
+                  <p> received_events_url: <a href="{{ user.received_events_url }}" target="_blank">{{ user.received_events_url }}</a></p>
+                </div>
+              </div>
+            </mat-expansion-panel>
+          </div>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+  
